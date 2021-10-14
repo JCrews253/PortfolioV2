@@ -1,5 +1,3 @@
-import Commit from "./Commit";
-
 interface BranchProps {
   children: JSX.Element | JSX.Element[];
 }

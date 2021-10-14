@@ -17,7 +17,7 @@ code {
 .branch {
   padding-left: 40px;
   margin-left: 57px;
-  border-left: solid 5px #bf616a;
+  border-left: solid 5px #c62828;
 }
 
 .branch::before {
