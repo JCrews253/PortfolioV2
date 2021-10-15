@@ -1,4 +1,6 @@
 interface CommitNodeProps {
+  id?: string;
+  link?: string;
   backgroundColor: string;
   borderColor: string;
   branchColor: string;
@@ -7,6 +9,8 @@ interface CommitNodeProps {
 }
 
 const CommitNode = ({
+  id,
+  link,
   backgroundColor,
   borderColor,
   branchColor,
@@ -23,6 +27,7 @@ const CommitNode = ({
       }}
     >
       <div
+        id={id}
         style={{
           borderLeft: `solid 5px ${branchColor}`,
           height: "100%",
@@ -32,6 +37,7 @@ const CommitNode = ({
         }}
       />
       <div
+        className={link && "linkedCommit"}
         style={{
           width: "90px",
           height: "90px",
@@ -41,6 +47,11 @@ const CommitNode = ({
           display: "flex",
           justifyContent: "center",
           zIndex: 1,
+        }}
+        onClick={() => {
+          if (link) {
+            window.open(link)?.focus();
+          }
         }}
       >
         <img

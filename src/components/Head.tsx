@@ -14,6 +14,7 @@ const Head = ({ backgroundColor, borderColor, branchColor }: HeadProps) => {
       }}
     >
       <div
+        id="head"
         style={{
           height: "250px",
           display: "flex",

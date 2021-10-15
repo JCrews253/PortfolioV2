@@ -1,14 +1,11 @@
-import { Container } from "@mui/material";
 import AppBar from "./components/AppBar";
 import GitGraph from "./components/GitGraph";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <AppBar />
-      <Container>
-        <GitGraph />
-      </Container>
+      <GitGraph />
     </div>
   );
 }

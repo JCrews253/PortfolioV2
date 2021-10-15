@@ -3,6 +3,8 @@ import CommitNode from "./CommitNode";
 import CommitMessage from "./CommitMessage";
 
 interface CommitProps {
+  id?: string;
+  link?: string;
   backgroundColor: string;
   borderColor: string;
   branchColor: string;
@@ -15,6 +17,8 @@ interface CommitProps {
 }
 
 const Commit = ({
+  id,
+  link,
   backgroundColor,
   borderColor,
   branchColor,
@@ -33,6 +37,8 @@ const Commit = ({
       }}
     >
       <CommitNode
+        id={id}
+        link={link}
         backgroundColor={backgroundColor}
         borderColor={borderColor}
         branchColor={branchColor}
