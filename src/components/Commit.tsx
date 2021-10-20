@@ -1,57 +1,48 @@
-import CommitNode from "./CommitNode";
+import CommitNode, { CommitNodeProps } from "./CommitNode";
+import CommitMessage, { CommitMessageProps } from "./CommitMessage";
+import { Box } from "@mui/system";
 
-import CommitMessage from "./CommitMessage";
-
-interface CommitProps {
-  id?: string;
-  link?: string;
-  backgroundColor: string;
-  borderColor: string;
-  branchColor: string;
-  commitTitle: string;
-  commitContent?: string;
-  commitSubContent?: string;
-  commitDate?: string;
-  image: string;
-  imageSize?: number;
-}
+interface CommitProps extends CommitNodeProps, CommitMessageProps {}
 
 const Commit = ({
   id,
   link,
-  backgroundColor,
-  borderColor,
-  branchColor,
-  commitTitle,
-  commitContent,
-  commitSubContent,
-  commitDate,
+  color,
+  isBranch,
+  Icon,
   image,
-  imageSize,
+  size = "sm",
+  title,
+  content,
+  subContent,
+  date,
 }: CommitProps) => {
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         display: "flex",
         alignItems: "center",
+        maxWidth: "1200px",
       }}
     >
       <CommitNode
         id={id}
         link={link}
-        backgroundColor={backgroundColor}
-        borderColor={borderColor}
-        branchColor={branchColor}
+        color={color}
+        isBranch={isBranch}
+        Icon={Icon}
         image={image}
-        imageSize={imageSize}
+        size={size}
       />
+
       <CommitMessage
-        title={commitTitle}
-        content={commitContent}
-        subContent={commitSubContent}
-        date={commitDate}
+        title={title}
+        content={content}
+        subContent={subContent}
+        date={date}
+        size={size}
       />
-    </div>
+    </Box>
   );
 };
 

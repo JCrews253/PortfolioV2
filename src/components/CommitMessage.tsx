@@ -1,8 +1,12 @@
-interface CommitMessageProps {
+import { Typography } from "@mui/material";
+import { Box } from "@mui/system";
+
+export interface CommitMessageProps {
   title?: string;
   content?: string;
   subContent?: string;
   date?: string;
+  size?: "sm" | "lg";
 }
 
 const CommitMessage = ({
@@ -10,11 +14,12 @@ const CommitMessage = ({
   content,
   subContent,
   date,
+  size = "sm",
 }: CommitMessageProps) => {
   return (
-    <div
-      style={{
-        paddingLeft: "20px",
+    <Box
+      sx={{
+        paddingLeft: size === "lg" ? "20px" : undefined,
         display: "flex",
         justifyContent: "space-between",
         flexGrow: 1,
@@ -22,29 +27,49 @@ const CommitMessage = ({
     >
       <div>
         {title && (
-          <h3
-            style={{
-              margin: "0",
+          <Typography
+            sx={{
+              fontSize: size === "sm" ? "18pt" : "25pt",
+              color: (theme) => theme.palette.text.primary,
             }}
           >
             {title}
-          </h3>
+          </Typography>
         )}
         {content && (
-          <p
-            style={{
-              margin: "0",
+          <Typography
+            sx={{
+              fontSize: "12pt",
+              color: (theme) => theme.palette.text.primary,
             }}
           >
             {content}
-          </p>
+          </Typography>
         )}
         {subContent && (
-          <p style={{ fontStyle: "italic", margin: "0" }}>{subContent}</p>
+          <Typography
+            sx={{
+              fontStyle: "italic",
+              fontSize: "12pt",
+              color: (theme) => theme.palette.text.primary,
+            }}
+          >
+            {subContent}
+          </Typography>
         )}
       </div>
-      <div>{date && <p>{date}</p>}</div>
-    </div>
+      {date && (
+        <Typography
+          sx={{
+            fontSize: "12pt",
+            paddingRight: 4,
+            color: (theme) => theme.palette.text.primary,
+          }}
+        >
+          {date}
+        </Typography>
+      )}
+    </Box>
   );
 };
 

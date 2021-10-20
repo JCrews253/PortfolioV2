@@ -29,7 +29,7 @@ const GitGraph = () => {
         boxShadow: "-5px 0px 3px -3px black, 5px 0px 3px -3px black",
       }}
     >
-      <Head
+      {/* <Head
         backgroundColor="#7289DA"
         borderColor="#4E5D94"
         branchColor="#4E5D94"
@@ -202,7 +202,7 @@ const GitGraph = () => {
         commitTitle="Git Init"
         image={Git}
         imageSize={50}
-      />
+      /> */}
     </div>
   );
 };

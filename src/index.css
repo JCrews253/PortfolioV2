@@ -5,8 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #36393f;
-  color: #ffffff;
 }
 html {
   scroll-behavior: smooth;
@@ -17,12 +15,14 @@ code {
     monospace;
 }
 
-.app {
-  display: flex;
-  justify-content: center;
+html,
+body,
+#root,
+#root > div {
+  height: 100%;
 }
 
-.appBar {
+/* .appBar {
   display: flex;
   align-items: center;
   padding: 0px 40px;
@@ -83,4 +83,4 @@ code {
   cursor: pointer;
   transform: scale(1.1);
   transition: transform 0.1s ease-in-out;
-}
+} */
