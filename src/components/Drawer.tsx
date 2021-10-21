@@ -22,11 +22,9 @@ import {
   faLaptopCode,
   faChessKing,
 } from "@fortawesome/free-solid-svg-icons";
-
 import {
   ExpandLess,
   ExpandMore,
-  StarBorder,
   BarChart,
   Fastfood,
   GridOn,
@@ -92,6 +90,10 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
   const [openBranches, setOpenBranches] = useState(false);
   const [openWork, setOpenWork] = useState(true);
   const [openProjects, setOpenProjects] = useState(true);
+
+  const handleClick = (elementId: string) => {
+    document.getElementById(elementId)?.scrollIntoView();
+  };
   return (
     <StyledDrawer
       variant="permanent"
@@ -109,31 +111,56 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
       </DrawerHeader>
       <Divider />
       <List>
-        <ListItem button key="About" disableRipple>
+        <ListItem
+          button
+          key="About"
+          disableRipple
+          onClick={() => handleClick("about")}
+        >
           <ListItemIcon>
             <InfoIcon />
           </ListItemIcon>
           <ListItemText primary="About" sx={{ ml: -1 }} />
         </ListItem>
-        <ListItem button key="Work" disableRipple>
+        <ListItem
+          button
+          key="Work"
+          disableRipple
+          onClick={() => handleClick("work")}
+        >
           <ListItemIcon>
             <WorkIcon />
           </ListItemIcon>
           <ListItemText primary="Work Expierence" sx={{ ml: -1 }} />
         </ListItem>
-        <ListItem button key="Projects" disableRipple>
+        <ListItem
+          button
+          key="Projects"
+          disableRipple
+          onClick={() => handleClick("projects")}
+        >
           <ListItemIcon sx={{ pl: "3px" }}>
             <FontAwesomeIcon icon={faLaptopCode} />
           </ListItemIcon>
           <ListItemText primary="Personal Projects" sx={{ ml: -1 }} />
         </ListItem>
-        <ListItem button key="Education" disableRipple>
+        <ListItem
+          button
+          key="Education"
+          disableRipple
+          onClick={() => handleClick("education")}
+        >
           <ListItemIcon>
             <SchoolIcon />
           </ListItemIcon>
           <ListItemText primary="Education" sx={{ ml: -1 }} />
         </ListItem>
-        <ListItem button key="Contact" disableRipple>
+        <ListItem
+          button
+          key="Contact"
+          disableRipple
+          onClick={() => handleClick("contact")}
+        >
           <ListItemIcon>
             <ContactPageIcon />
           </ListItemIcon>

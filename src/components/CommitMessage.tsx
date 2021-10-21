@@ -28,8 +28,10 @@ const CommitMessage = ({
       <div>
         {title && (
           <Typography
+            variant="h1"
             sx={{
-              fontSize: size === "sm" ? "18pt" : "25pt",
+              fontWeight: 550,
+              fontSize: size === "sm" ? "16pt" : "22pt",
               color: (theme) => theme.palette.text.primary,
             }}
           >
@@ -52,6 +54,7 @@ const CommitMessage = ({
               fontStyle: "italic",
               fontSize: "12pt",
               color: (theme) => theme.palette.text.primary,
+              lineHeight: 1.2,
             }}
           >
             {subContent}
@@ -64,6 +67,7 @@ const CommitMessage = ({
             fontSize: "12pt",
             paddingRight: 4,
             color: (theme) => theme.palette.text.primary,
+            alignSelf: "center",
           }}
         >
           {date}

@@ -1,15 +1,14 @@
-import { Work } from "@mui/icons-material";
 import { ThemeProvider, Box, PaletteMode, createTheme } from "@mui/material";
 import AppBar from "./components/AppBar";
-import CommitNode from "./components/CommitNode";
-import GitGraph from "./components/GitGraph";
 import { getThemePalette } from "./Theme";
-import ProfilePicture from "./Images/profile-picture.jpg";
-import Commit from "./components/Commit";
 import Drawer from "./components/Drawer";
 import { createContext, useMemo, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BranchesLeftDark from "./Images/branchesLeftDark.png";
+import BranchesLeftLight from "./Images/branchesLeftLight.png";
+import BranchesRightDark from "./Images/branchesRightDark.png";
+import BranchesRightLight from "./Images/branchesRightLight.png";
 import "./index.css";
+import GitTree from "./components/GitTree";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -31,29 +30,38 @@ function App() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", overflowX: "hidden" }}>
           <AppBar open={open} setOpen={() => setOpen(true)} />
           <Drawer open={open} setOpen={setOpen} />
+          <GitTree />
           <Box
             sx={{
+              position: "fixed",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              opacity: 0.05,
               display: "flex",
-              flexDirection: "column",
-              paddingLeft: "50px",
-              marginTop: "64px",
-              width: "100%",
-              backgroundColor: (theme) => theme.palette.background.default,
+              justifyContent: "space-between",
             }}
           >
-            <Commit size="lg" image={ProfilePicture} title="Work Experience" />
-            <Commit
-              Icon={Work}
-              title="Work Experience"
-              content="Content"
-              subContent="SubContent"
-              date="date"
+            <img
+              src={
+                theme.palette.mode === "dark"
+                  ? BranchesLeftDark
+                  : BranchesLeftLight
+              }
             />
-            <Commit Icon={Work} />
-            <Commit Icon={Work} color="SEL" isBranch link="asdfas" />
+            <img
+              src={
+                theme.palette.mode === "dark"
+                  ? BranchesRightDark
+                  : BranchesRightLight
+              }
+              style={{
+                paddingLeft: "20px",
+              }}
+            />
           </Box>
         </Box>
       </ThemeProvider>

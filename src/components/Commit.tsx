@@ -9,6 +9,7 @@ const Commit = ({
   link,
   color,
   isBranch,
+  isInit,
   Icon,
   image,
   size = "sm",
@@ -16,6 +17,9 @@ const Commit = ({
   content,
   subContent,
   date,
+  faIcon,
+  iconSize,
+  Element,
 }: CommitProps) => {
   return (
     <Box
@@ -30,9 +34,13 @@ const Commit = ({
         link={link}
         color={color}
         isBranch={isBranch}
+        isInit={isInit}
         Icon={Icon}
+        faIcon={faIcon}
         image={image}
         size={size}
+        iconSize={iconSize}
+        Element={Element}
       />
 
       <CommitMessage

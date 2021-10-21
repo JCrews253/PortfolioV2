@@ -1,20 +1,26 @@
 import { Box } from "@mui/system";
 import { Color, ColorSelector, ColorSelectorDark } from "../Theme";
 import { Work } from "@mui/icons-material";
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export interface CommitNodeProps {
   id?: string;
   link?: string;
   color?: Color;
   isBranch?: boolean;
+  isInit?: boolean;
   image?: string;
   Icon?: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
     muiName: string;
   };
   size?: "sm" | "lg";
+  faIcon?: IconProp;
+  Element?: ReactNode;
+  iconSize?: number;
 }
 
 const CommitNode = ({
@@ -22,12 +28,17 @@ const CommitNode = ({
   link,
   color,
   isBranch,
+  isInit,
   image,
   Icon,
   size = "sm",
+  faIcon,
+  iconSize,
+  Element,
 }: CommitNodeProps) => {
   return (
     <Box
+      id={id}
       sx={{
         height: size === "sm" ? "150px" : "250px",
         width: "170px",
@@ -48,7 +59,7 @@ const CommitNode = ({
           height: size === "sm" ? "100%" : "50%",
           position: "absolute",
           left: "50%",
-          bottom: 0,
+          bottom: isInit ? 50 : 0,
           zIndex: 0,
         }}
       />
@@ -82,17 +93,27 @@ const CommitNode = ({
           }
         }}
       >
-        {Icon && <Icon sx={{ fontSize: 50, fill: "white" }} />}
+        {Icon && (
+          <Icon sx={{ fontSize: iconSize ? iconSize : 50, fill: "white" }} />
+        )}
+        {faIcon && (
+          <FontAwesomeIcon
+            icon={faIcon}
+            style={{ fontSize: iconSize ? iconSize : 50 }}
+            color="#FFFFFF"
+          />
+        )}
         {image && (
           <img
             src={image}
             style={{
-              width: `${100}%`,
+              width: `${iconSize ? iconSize : 100}%`,
               objectFit: "scale-down",
             }}
             alt=""
           />
         )}
+        {Element}
       </Box>
     </Box>
   );
