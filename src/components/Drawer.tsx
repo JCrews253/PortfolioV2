@@ -213,6 +213,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
                         height: "20px",
                         ml: "-4px",
                         fill: (theme) => theme.palette.text.primary,
+                        opacity: 0.7,
                       }}
                     >
                       <SelLogo />

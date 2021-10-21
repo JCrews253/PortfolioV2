@@ -65,7 +65,14 @@ function App() {
     <BranchContext.Provider value={branchValue}>
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
-          <Box sx={{ display: "flex", overflowX: "hidden" }}>
+          <Box
+            sx={{
+              display: "flex",
+              overflowX: "hidden",
+              height: "100%",
+              backgroundColor: (theme) => theme.palette.background.default,
+            }}
+          >
             <AppBar open={open} setOpen={() => setOpen(true)} />
             <Drawer open={open} setOpen={setOpen} />
             <Box
@@ -73,7 +80,7 @@ function App() {
                 display: "flex",
                 flexDirection: "column",
                 paddingLeft: "50px",
-                marginTop: "56px",
+                marginTop: "64px",
                 width: "100%",
                 minWidth: "800px",
                 overflowX: "hidden",
