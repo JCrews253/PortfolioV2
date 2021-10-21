@@ -1,11 +1,11 @@
 import { Box } from "@mui/system";
 import { Color, ColorSelector, ColorSelectorDark } from "../Theme";
-import { Work } from "@mui/icons-material";
-import { ReactElement, ReactNode } from "react";
+import { ReactNode, useContext } from "react";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { BranchContext, branches } from "../App";
 
 export interface CommitNodeProps {
   id?: string;
@@ -21,6 +21,7 @@ export interface CommitNodeProps {
   faIcon?: IconProp;
   Element?: ReactNode;
   iconSize?: number;
+  branch?: branches;
 }
 
 const CommitNode = ({
@@ -35,7 +36,9 @@ const CommitNode = ({
   faIcon,
   iconSize,
   Element,
+  branch,
 }: CommitNodeProps) => {
+  const { setBranch } = useContext(BranchContext);
   return (
     <Box
       id={id}
@@ -64,7 +67,6 @@ const CommitNode = ({
         }}
       />
       <Box
-        className={link && "linkedCommit"}
         sx={{
           width: size === "sm" ? "90px" : "150px",
           height: size === "sm" ? "90px" : "150px",
@@ -82,14 +84,16 @@ const CommitNode = ({
           zIndex: 1,
           overflow: "hidden",
           "&:hover": {
-            cursor: link && "pointer",
-            transform: link && "scale(1.1)",
-            transition: link && "transform 0.1s ease-in-out",
+            cursor: (link || branch) && "pointer",
+            transform: (link || branch) && "scale(1.1)",
+            transition: (link || branch) && "transform 0.1s ease-in-out",
           },
         }}
         onClick={() => {
           if (link) {
             window.open(link)?.focus();
+          } else if (branch) {
+            setBranch(branch);
           }
         }}
       >

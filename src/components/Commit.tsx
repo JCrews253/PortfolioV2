@@ -20,6 +20,7 @@ const Commit = ({
   faIcon,
   iconSize,
   Element,
+  branch,
 }: CommitProps) => {
   return (
     <Box
@@ -41,6 +42,7 @@ const Commit = ({
         size={size}
         iconSize={iconSize}
         Element={Element}
+        branch={branch}
       />
 
       <CommitMessage

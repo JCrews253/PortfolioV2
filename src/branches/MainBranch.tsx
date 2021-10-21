@@ -1,5 +1,4 @@
-import { Box } from "@mui/system";
-import Commit from "./Commit";
+import Commit from "../components/Commit";
 import ProfilePicture from "../Images/profile-picture.jpg";
 import {
   Work,
@@ -16,26 +15,15 @@ import {
 } from "@mui/icons-material";
 import { faGitAlt } from "@fortawesome/free-brands-svg-icons";
 import { faLaptopCode, faChessKing } from "@fortawesome/free-solid-svg-icons";
-import Branch from "./Branch";
+import Branch from "../components/Branch";
 import WsuLogo from "../Images/wsu.png";
 import GrcLogo from "../Images/GrcLogo.png";
 import SelLogo from "../Icons/SelLogo";
 import PsiLogo from "../Images/psi_adobespark.png";
 
-const GitTree = () => {
+const MainBranch = () => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        paddingLeft: "50px",
-        marginTop: "56px",
-        width: "100%",
-        minWidth: "800px",
-        overflowX: "hidden",
-        backgroundColor: (theme) => theme.palette.background.default,
-      }}
-    >
+    <>
       <Commit
         size="lg"
         image={ProfilePicture}
@@ -62,6 +50,7 @@ const GitTree = () => {
           date="October 2020-Present"
           color="SEL"
           isBranch
+          branch="sel"
         />
         <Commit
           image={PsiLogo}
@@ -72,6 +61,7 @@ const GitTree = () => {
           date="April 2018-October 2020"
           color="PSI"
           isBranch
+          branch="psi"
         />
       </Branch>
       <Commit
@@ -88,6 +78,7 @@ const GitTree = () => {
           subContent="C#, React, GraphQL, Typescript, MongoDB"
           color="Recipe"
           isBranch
+          branch="recipe"
         />
         <Commit
           faIcon={faChessKing}
@@ -96,6 +87,7 @@ const GitTree = () => {
           subContent="React, Typescript"
           color="ChessAI"
           isBranch
+          branch="sorting"
         />
         <Commit
           Icon={GridOn}
@@ -104,6 +96,7 @@ const GitTree = () => {
           subContent="React, Redux, Typescript, Express"
           color="PathFinding"
           isBranch
+          branch="pathfinding"
         />
         <Commit
           Icon={BarChart}
@@ -112,6 +105,7 @@ const GitTree = () => {
           subContent="React, Typescript"
           color="Sorting"
           isBranch
+          branch="sorting"
         />
       </Branch>
       <Commit Icon={School} title="Education" id="education" />
@@ -136,14 +130,32 @@ const GitTree = () => {
       </Branch>
       <Commit Icon={ContactPage} title="Contact" id="contact" />
       <Branch>
-        <Commit Icon={GitHub} title="Github" color="Github" isBranch />
-        <Commit Icon={LinkedIn} title="LinkedIn" color="LinkedIn" isBranch />
+        <Commit
+          Icon={GitHub}
+          title="Github"
+          color="Github"
+          isBranch
+          link="https://github.com/JCrews253"
+        />
+        <Commit
+          Icon={LinkedIn}
+          title="LinkedIn"
+          color="LinkedIn"
+          isBranch
+          link="https://www.linkedin.com/in/james-crews-208742132"
+        />
         <Commit Icon={InsertDriveFile} title="Resume" color="Resume" isBranch />
-        <Commit Icon={Email} title="Email" color="Email" isBranch />
+        <Commit
+          Icon={Email}
+          title="Email"
+          color="Email"
+          isBranch
+          link="mailto:jcrews206@gmail.com"
+        />
       </Branch>
       <Commit faIcon={faGitAlt} title="Git init" isInit />
-    </Box>
+    </>
   );
 };
 
-export default GitTree;
+export default MainBranch;

@@ -6,9 +6,8 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useContext } from "react";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
-import { ColorModeContext } from "../App";
+import { BranchContext, ColorModeContext } from "../App";
 import { Box } from "@mui/system";
-import { Button } from "@mui/material";
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -37,6 +36,7 @@ const CustomAppBar = styled(MuiAppBar, {
 const AppBar = ({ open, setOpen }: AppBarProps) => {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
+  const { setBranch } = useContext(BranchContext);
   return (
     <CustomAppBar position="fixed" open={open}>
       <Toolbar>
@@ -60,7 +60,10 @@ const AppBar = ({ open, setOpen }: AppBarProps) => {
             cursor: "pointer",
             padding: "5px 5px 5px 0px",
           }}
-          onClick={() => window.scrollTo(0, 0)}
+          onClick={() => {
+            setBranch("main");
+            window.scrollTo(0, 0);
+          }}
         >
           James Crews
         </Typography>

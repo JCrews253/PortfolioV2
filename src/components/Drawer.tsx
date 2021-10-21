@@ -30,8 +30,9 @@ import {
   GridOn,
   HomeWork,
 } from "@mui/icons-material";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import SelLogo from "../Icons/SelLogo";
+import { BranchContext } from "../App";
 
 const drawerWidth = 240;
 
@@ -90,7 +91,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
   const [openBranches, setOpenBranches] = useState(false);
   const [openWork, setOpenWork] = useState(true);
   const [openProjects, setOpenProjects] = useState(true);
-
+  const { setBranch } = useContext(BranchContext);
   const handleClick = (elementId: string) => {
     document.getElementById(elementId)?.scrollIntoView();
   };
@@ -265,7 +266,11 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
                   </ListItemIcon>
                   <ListItemText primary="Path Finding" sx={{ ml: -1 }} />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 7 }} disableRipple>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  disableRipple
+                  onClick={() => setBranch("sorting")}
+                >
                   <ListItemIcon>
                     <BarChart />
                   </ListItemIcon>
