@@ -9,7 +9,9 @@ import BranchesRightDark from "./Images/branchesRightDark.png";
 import BranchesRightLight from "./Images/branchesRightLight.png";
 import "./index.css";
 import MainBranch from "./branches/MainBranch";
-import SortingVisualization from "./branches/SortingVisualization";
+import SortingVisualizationBranch from "./branches/projects/SortingVisualizationBranch";
+import PathFindingBranch from "./branches/projects/PathFindingBranch";
+import ChessBranch from "./branches/projects/ChessBranch";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 export const BranchContext = createContext({
@@ -55,7 +57,11 @@ function App() {
       case "main":
         return <MainBranch />;
       case "sorting":
-        return <SortingVisualization />;
+        return <SortingVisualizationBranch />;
+      case "pathfinding":
+        return <PathFindingBranch />;
+      case "chess":
+        return <ChessBranch />;
       default:
         return <MainBranch />;
     }

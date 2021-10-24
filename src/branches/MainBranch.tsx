@@ -87,7 +87,7 @@ const MainBranch = () => {
           subContent="React, Typescript"
           color="ChessAI"
           isBranch
-          branch="sorting"
+          branch="chess"
         />
         <Commit
           Icon={GridOn}

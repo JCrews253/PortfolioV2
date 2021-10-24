@@ -1,7 +1,7 @@
-import Commit from "../components/Commit";
 import { BarChart, Info, OpenInNew, Image, GridOn } from "@mui/icons-material";
+import Commit from "../../components/Commit";
 
-const SortingVisualization = () => {
+const SortingVisualizationBranch = () => {
   return (
     <>
       <Commit
@@ -31,4 +31,4 @@ const SortingVisualization = () => {
   );
 };
 
-export default SortingVisualization;
+export default SortingVisualizationBranch;

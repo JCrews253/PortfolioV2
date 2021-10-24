@@ -93,7 +93,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
   const [openProjects, setOpenProjects] = useState(true);
   const { setBranch } = useContext(BranchContext);
   const handleClick = (elementId: string) => {
-    document.getElementById(elementId)?.scrollIntoView();
+    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <StyledDrawer
@@ -246,13 +246,21 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
             </ListItemButton>
             <Collapse in={openProjects} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 7 }} disableRipple>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  disableRipple
+                  onClick={() => setBranch("recipe")}
+                >
                   <ListItemIcon>
                     <Fastfood />
                   </ListItemIcon>
                   <ListItemText primary="Recipe App" sx={{ ml: -1 }} />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 7 }} disableRipple>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  disableRipple
+                  onClick={() => setBranch("chess")}
+                >
                   <ListItemIcon sx={{ pl: "2px" }}>
                     <FontAwesomeIcon
                       icon={faChessKing}
@@ -261,7 +269,11 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
                   </ListItemIcon>
                   <ListItemText primary="Chess AI" sx={{ ml: -1 }} />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 7 }} disableRipple>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  disableRipple
+                  onClick={() => setBranch("pathfinding")}
+                >
                   <ListItemIcon>
                     <GridOn />
                   </ListItemIcon>
