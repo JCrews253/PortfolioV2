@@ -1,4 +1,4 @@
-import { BarChart, Info, OpenInNew, Image, GridOn } from "@mui/icons-material";
+import { BarChart, Info, OpenInNew, GridOn } from "@mui/icons-material";
 import Commit from "../../components/Commit";
 
 const SortingVisualizationBranch = () => {
@@ -8,9 +8,7 @@ const SortingVisualizationBranch = () => {
         size="lg"
         Icon={BarChart}
         title="Sorting Visualization"
-        content="Visualization of popular sorting algorithms"
-        subContent="React, Typescript"
-        color="Sorting"
+        branch="sorting"
         iconSize={100}
       />
       <Commit Icon={Info} title="About" />
@@ -19,13 +17,13 @@ const SortingVisualizationBranch = () => {
         title="View Live!"
         link="https://jcrews253.github.io/sorting-visualizer/"
       />
-      <Commit Icon={Image} title="Images" />
+
       <Commit
         title="Next Project: Path Finding Visualization"
         Icon={GridOn}
-        color="PathFinding"
         isInit
-        branch="pathfinding"
+        branch="pathFinding"
+        routeBranch
       />
     </>
   );

@@ -1,4 +1,5 @@
 import { PaletteMode } from "@mui/material";
+import { branch } from "./branches/Branch";
 
 export const getThemePalette = (mode: PaletteMode) => ({
   palette: {
@@ -30,76 +31,62 @@ export const getThemePalette = (mode: PaletteMode) => ({
   },
 });
 
-export type Color =
-  | "SEL"
-  | "PSI"
-  | "Recipe"
-  | "ChessAI"
-  | "PathFinding"
-  | "Sorting"
-  | "WSU"
-  | "GRC"
-  | "Github"
-  | "LinkedIn"
-  | "Resume"
-  | "Email";
-
-export const ColorSelector = (color: Color) => {
-  switch (color) {
-    case "SEL":
+export const ColorSelector = (branch: branch) => {
+  switch (branch) {
+    case "sel":
       return "#162D71";
-    case "PSI":
+    case "psi":
       return "#64B4C9";
-    case "Recipe":
+    case "recipe":
       return "#162D71";
-    case "ChessAI":
+    case "chess":
       return "#4C566A";
-    case "PathFinding":
+    case "pathFinding":
       return "#EA00D7";
-    case "Sorting":
+    case "sorting":
       return "#00F6FF";
-    case "WSU":
+    case "wsu":
       return "#981E32";
-    case "GRC":
+    case "grc":
       return "#2C882B";
-    case "Github":
+    case "github":
       return "#161B22";
-    case "LinkedIn":
+    case "linkedIn":
       return "#0A66C2";
-    case "Resume":
+    case "resume":
       return "#FA0F00";
-    case "Email":
+    case "email":
       return "#27A3E3";
     default:
       return "red";
   }
 };
 
-export const ColorSelectorDark = (color: Color) => {
-  switch (color) {
-    case "SEL":
+export const ColorSelectorDark = (branch: branch) => {
+  switch (branch) {
+    case "sel":
       return "#070E24";
-    case "PSI":
+    case "psi":
       return "#3D6F7C";
-    case "Recipe":
+    case "recipe":
       return "#070E24";
-    case "ChessAI":
+    case "chess":
       return "#2E3440";
-    case "PathFinding":
+    case "pathFinding":
       return "#9D0090";
-    case "Sorting":
+    case "sorting":
       return "#00ACB2";
-    case "WSU":
+    case "wsu":
       return "#651321";
-    case "GRC":
+    case "grc":
       return "#1F611D";
-    case "Github":
+    case "github":
       return "#0D1117";
-    case "LinkedIn":
+    case "linkedIn":
       return "#05386B";
-    case "Resume":
+    case "resume":
       return "#AD0A00";
-    case "Email":
+    case "email":
       return "#0074CD";
     default:
       return "red";

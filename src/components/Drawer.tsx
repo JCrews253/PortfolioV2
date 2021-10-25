@@ -205,7 +205,11 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
             </ListItemButton>
             <Collapse in={openWork} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 7 }} disableRipple>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  disableRipple
+                  onClick={() => setBranch("sel")}
+                >
                   <ListItemIcon>
                     <Box
                       sx={{
@@ -221,7 +225,11 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
                   </ListItemIcon>
                   <ListItemText primary="SEL" sx={{ ml: -1 }} />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 7 }} disableRipple>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  disableRipple
+                  onClick={() => setBranch("psi")}
+                >
                   <ListItemIcon>
                     <HomeWork />
                   </ListItemIcon>
@@ -272,7 +280,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
                 <ListItemButton
                   sx={{ pl: 7 }}
                   disableRipple
-                  onClick={() => setBranch("pathfinding")}
+                  onClick={() => setBranch("pathFinding")}
                 >
                   <ListItemIcon>
                     <GridOn />

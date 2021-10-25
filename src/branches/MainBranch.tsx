@@ -25,6 +25,7 @@ const MainBranch = () => {
   return (
     <>
       <Commit
+        id="head"
         size="lg"
         image={ProfilePicture}
         title="Hello! My name is James Crews."
@@ -48,9 +49,9 @@ const MainBranch = () => {
           content="Schweitzer Engineering Labratories"
           subContent="C#, React, GraphQL, Typescript"
           date="October 2020-Present"
-          color="SEL"
           isBranch
           branch="sel"
+          routeBranch
         />
         <Commit
           image={PsiLogo}
@@ -59,9 +60,9 @@ const MainBranch = () => {
           content="Process Solutions Inc"
           subContent="C#, RSLogix, WonderWare"
           date="April 2018-October 2020"
-          color="PSI"
           isBranch
           branch="psi"
+          routeBranch
         />
       </Branch>
       <Commit
@@ -76,7 +77,6 @@ const MainBranch = () => {
           title="Recipe Planner"
           content="App to find and plan recipes"
           subContent="C#, React, GraphQL, Typescript, MongoDB"
-          color="Recipe"
           isBranch
           branch="recipe"
         />
@@ -85,27 +85,27 @@ const MainBranch = () => {
           title="Chess AI - Min Max Algo"
           content="Chess AI with move highlighting"
           subContent="React, Typescript"
-          color="ChessAI"
           isBranch
           branch="chess"
+          routeBranch
         />
         <Commit
           Icon={GridOn}
           title="Retro Path Finding Visualization"
           content="Visualization of popular path finding algorithms"
           subContent="React, Redux, Typescript, Express"
-          color="PathFinding"
           isBranch
-          branch="pathfinding"
+          branch="pathFinding"
+          routeBranch
         />
         <Commit
           Icon={BarChart}
           title="Sorting Visualization"
           content="Visualization of popular sorting algorithms"
           subContent="React, Typescript"
-          color="Sorting"
           isBranch
           branch="sorting"
+          routeBranch
         />
       </Branch>
       <Commit Icon={School} title="Education" id="education" />
@@ -115,7 +115,7 @@ const MainBranch = () => {
           title="Washington State University"
           content="B.S. Mechanical Engineering"
           date="GPA: 3.8"
-          color="WSU"
+          branch="wsu"
           isBranch
         />
         <Commit
@@ -123,7 +123,7 @@ const MainBranch = () => {
           title="Green River College"
           content="A.A.S. Mechanical Engineering"
           date="GPA: 3.5"
-          color="GRC"
+          branch="grc"
           iconSize={80}
           isBranch
         />
@@ -133,22 +133,27 @@ const MainBranch = () => {
         <Commit
           Icon={GitHub}
           title="Github"
-          color="Github"
+          branch="github"
           isBranch
           link="https://github.com/JCrews253"
         />
         <Commit
           Icon={LinkedIn}
           title="LinkedIn"
-          color="LinkedIn"
+          branch="linkedIn"
           isBranch
           link="https://www.linkedin.com/in/james-crews-208742132"
         />
-        <Commit Icon={InsertDriveFile} title="Resume" color="Resume" isBranch />
+        <Commit
+          Icon={InsertDriveFile}
+          title="Resume"
+          branch="resume"
+          isBranch
+        />
         <Commit
           Icon={Email}
           title="Email"
-          color="Email"
+          branch="email"
           isBranch
           link="mailto:jcrews206@gmail.com"
         />

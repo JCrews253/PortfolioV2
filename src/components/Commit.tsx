@@ -7,7 +7,6 @@ interface CommitProps extends CommitNodeProps, CommitMessageProps {}
 const Commit = ({
   id,
   link,
-  color,
   isBranch,
   isInit,
   Icon,
@@ -21,6 +20,7 @@ const Commit = ({
   iconSize,
   Element,
   branch,
+  routeBranch,
 }: CommitProps) => {
   return (
     <Box
@@ -33,7 +33,6 @@ const Commit = ({
       <CommitNode
         id={id}
         link={link}
-        color={color}
         isBranch={isBranch}
         isInit={isInit}
         Icon={Icon}
@@ -43,6 +42,7 @@ const Commit = ({
         iconSize={iconSize}
         Element={Element}
         branch={branch}
+        routeBranch={routeBranch}
       />
 
       <CommitMessage

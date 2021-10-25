@@ -12,22 +12,16 @@ import MainBranch from "./branches/MainBranch";
 import SortingVisualizationBranch from "./branches/projects/SortingVisualizationBranch";
 import PathFindingBranch from "./branches/projects/PathFindingBranch";
 import ChessBranch from "./branches/projects/ChessBranch";
+import SelBranch from "./branches/work/SelBranch";
+import PsiBranch from "./branches/work/PsiBranch";
+import RecipePlannerBranch from "./branches/projects/RecipePlannerBranch";
+import { branch } from "./branches/Branch";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 export const BranchContext = createContext({
   branch: "",
-  setBranch: (branch: branches) => {},
+  setBranch: (branch: branch) => {},
 });
-
-export type branches =
-  | "main"
-  | "sel"
-  | "psi"
-  | "grc"
-  | "recipe"
-  | "chess"
-  | "pathfinding"
-  | "sorting";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -43,7 +37,7 @@ function App() {
     []
   );
   const theme = useMemo(() => createTheme(getThemePalette(mode)), [mode]);
-  const [branch, setBranch] = useState<branches>("main");
+  const [branch, setBranch] = useState<branch>("main");
   const branchValue = useMemo(
     () => ({
       branch,
@@ -56,12 +50,18 @@ function App() {
     switch (branch) {
       case "main":
         return <MainBranch />;
-      case "sorting":
-        return <SortingVisualizationBranch />;
-      case "pathfinding":
-        return <PathFindingBranch />;
+      case "sel":
+        return <SelBranch />;
+      case "psi":
+        return <PsiBranch />;
+      case "recipe":
+        return <RecipePlannerBranch />;
       case "chess":
         return <ChessBranch />;
+      case "pathFinding":
+        return <PathFindingBranch />;
+      case "sorting":
+        return <SortingVisualizationBranch />;
       default:
         return <MainBranch />;
     }
@@ -104,6 +104,7 @@ function App() {
                 opacity: 0.05,
                 display: "flex",
                 justifyContent: "space-between",
+                userSelect: "none",
               }}
             >
               <img

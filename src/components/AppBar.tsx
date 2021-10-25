@@ -36,7 +36,7 @@ const CustomAppBar = styled(MuiAppBar, {
 const AppBar = ({ open, setOpen }: AppBarProps) => {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
-  const { setBranch } = useContext(BranchContext);
+  const { branch, setBranch } = useContext(BranchContext);
   return (
     <CustomAppBar position="fixed" open={open}>
       <Toolbar>
@@ -61,8 +61,13 @@ const AppBar = ({ open, setOpen }: AppBarProps) => {
             padding: "5px 5px 5px 0px",
           }}
           onClick={() => {
-            setBranch("main");
-            window.scrollTo(0, 0);
+            if (branch !== "main") {
+              setBranch("main");
+            } else {
+              document
+                .getElementById("head")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }
           }}
         >
           James Crews

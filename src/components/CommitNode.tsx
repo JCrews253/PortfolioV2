@@ -1,16 +1,16 @@
 import { Box } from "@mui/system";
-import { Color, ColorSelector, ColorSelectorDark } from "../Theme";
+import { ColorSelector, ColorSelectorDark } from "../Theme";
 import { ReactNode, useContext } from "react";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { BranchContext, branches } from "../App";
+import { BranchContext } from "../App";
+import { branch } from "../branches/Branch";
 
 export interface CommitNodeProps {
   id?: string;
   link?: string;
-  color?: Color;
   isBranch?: boolean;
   isInit?: boolean;
   image?: string;
@@ -21,13 +21,13 @@ export interface CommitNodeProps {
   faIcon?: IconProp;
   Element?: ReactNode;
   iconSize?: number;
-  branch?: branches;
+  branch?: branch;
+  routeBranch?: boolean;
 }
 
 const CommitNode = ({
   id,
   link,
-  color,
   isBranch,
   isInit,
   image,
@@ -37,8 +37,10 @@ const CommitNode = ({
   iconSize,
   Element,
   branch,
+  routeBranch,
 }: CommitNodeProps) => {
   const { setBranch } = useContext(BranchContext);
+  const hoverable = !!link || !!routeBranch;
   return (
     <Box
       id={id}
@@ -49,6 +51,7 @@ const CommitNode = ({
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
+        userSelect: "none",
       }}
     >
       <Box
@@ -70,13 +73,13 @@ const CommitNode = ({
         sx={{
           width: size === "sm" ? "90px" : "150px",
           height: size === "sm" ? "90px" : "150px",
-          backgroundColor: color
-            ? ColorSelector(color)
+          backgroundColor: branch
+            ? ColorSelector(branch)
             : (theme) => theme.palette.primary.main,
           borderRadius: "100%",
           border: (theme) =>
             `solid 10px ${
-              color ? ColorSelectorDark(color) : theme.palette.primary.dark
+              branch ? ColorSelectorDark(branch) : theme.palette.primary.dark
             }`,
           display: "flex",
           justifyContent: "center",
@@ -84,15 +87,15 @@ const CommitNode = ({
           zIndex: 1,
           overflow: "hidden",
           "&:hover": {
-            cursor: (link || branch) && "pointer",
-            transform: (link || branch) && "scale(1.1)",
-            transition: (link || branch) && "transform 0.1s ease-in-out",
+            cursor: hoverable ? "pointer" : undefined,
+            transform: hoverable ? "scale(1.1)" : undefined,
+            transition: hoverable ? "transform 0.1s ease-in-out" : undefined,
           },
         }}
         onClick={() => {
           if (link) {
             window.open(link)?.focus();
-          } else if (branch) {
+          } else if (branch && routeBranch) {
             setBranch(branch);
           }
         }}
