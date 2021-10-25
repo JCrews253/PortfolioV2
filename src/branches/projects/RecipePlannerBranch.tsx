@@ -1,5 +1,5 @@
 import { faChessKing } from "@fortawesome/free-solid-svg-icons";
-import { Fastfood, Info, OpenInNew } from "@mui/icons-material";
+import { Code, Fastfood, Info, OpenInNew } from "@mui/icons-material";
 import Commit from "../../components/Commit";
 
 const RecipePlannerBranch = () => {
@@ -14,6 +14,11 @@ const RecipePlannerBranch = () => {
       />
       <Commit Icon={Info} title="About" />
       <Commit Icon={OpenInNew} title="View Live!" />
+      <Commit
+        Icon={Code}
+        title="Source Code"
+        link="https://github.com/JCrews253/FoodPlanner"
+      />
       <Commit
         title="Previous Project: Chess AI - Min Max Algo"
         faIcon={faChessKing}

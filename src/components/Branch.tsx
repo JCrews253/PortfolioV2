@@ -12,6 +12,8 @@ const Branch = ({ children }: BranchProps) => {
         marginLeft: "85px",
         borderLeft: (theme) => `solid 5px ${theme.palette.primary.dark}`,
         position: "relative",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <Box

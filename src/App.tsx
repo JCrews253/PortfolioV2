@@ -88,9 +88,8 @@ function App() {
                 paddingLeft: "50px",
                 marginTop: "64px",
                 width: "100%",
-                minWidth: "800px",
                 overflowX: "hidden",
-                backgroundColor: (theme) => theme.palette.background.default,
+                zIndex: 1,
               }}
             >
               {getBranch()}
@@ -105,6 +104,7 @@ function App() {
                 display: "flex",
                 justifyContent: "space-between",
                 userSelect: "none",
+                zIndex: 0,
               }}
             >
               <img

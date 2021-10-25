@@ -1,5 +1,5 @@
 import { faChessKing } from "@fortawesome/free-solid-svg-icons";
-import { Fastfood, GridOn, Info, OpenInNew } from "@mui/icons-material";
+import { Code, Fastfood, GridOn, Info, OpenInNew } from "@mui/icons-material";
 import Commit from "../../components/Commit";
 
 const ChessBranch = () => {
@@ -12,11 +12,19 @@ const ChessBranch = () => {
         branch="chess"
         iconSize={100}
       />
-      <Commit Icon={Info} title="About" />
+      <Commit
+        Icon={Info}
+        title="Chess AI that uses the Min-Max game algorithm to determine its moves."
+      />
       <Commit
         Icon={OpenInNew}
         title="View Live!"
         link="https://jcrews253.github.io/chess/"
+      />
+      <Commit
+        Icon={Code}
+        title="Source Code"
+        link="https://github.com/JCrews253/chess"
       />
       <Commit
         title="Next Project: Recipe Planner"

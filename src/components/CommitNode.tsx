@@ -1,4 +1,4 @@
-import { Box } from "@mui/system";
+import { Box, Theme } from "@mui/system";
 import { ColorSelector, ColorSelectorDark } from "../Theme";
 import { ReactNode, useContext } from "react";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
@@ -41,17 +41,39 @@ const CommitNode = ({
 }: CommitNodeProps) => {
   const { setBranch } = useContext(BranchContext);
   const hoverable = !!link || !!routeBranch;
+
+  const GetBackgroundColor = (theme: Theme) => {
+    if (branch) {
+      return ColorSelector(branch);
+    } else if (isBranch) {
+      return theme.palette.secondary.light;
+    } else {
+      return theme.palette.primary.main;
+    }
+  };
+
+  const GetBorderColor = (theme: Theme) => {
+    if (branch) {
+      return ColorSelectorDark(branch);
+    } else if (isBranch) {
+      return theme.palette.secondary.main;
+    } else {
+      return theme.palette.primary.dark;
+    }
+  };
+
   return (
     <Box
       id={id}
       sx={{
-        height: size === "sm" ? "150px" : "250px",
-        width: "170px",
+        minHeight: size === "sm" ? "150px" : "250px",
+        height: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
         userSelect: "none",
+        padding: size === "sm" ? "0px 30px" : undefined,
       }}
     >
       <Box
@@ -73,14 +95,9 @@ const CommitNode = ({
         sx={{
           width: size === "sm" ? "90px" : "150px",
           height: size === "sm" ? "90px" : "150px",
-          backgroundColor: branch
-            ? ColorSelector(branch)
-            : (theme) => theme.palette.primary.main,
+          backgroundColor: (theme) => GetBackgroundColor(theme),
           borderRadius: "100%",
-          border: (theme) =>
-            `solid 10px ${
-              branch ? ColorSelectorDark(branch) : theme.palette.primary.dark
-            }`,
+          border: (theme) => `solid 10px ${GetBorderColor(theme)}`,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

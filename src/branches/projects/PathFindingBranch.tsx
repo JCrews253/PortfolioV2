@@ -1,5 +1,5 @@
 import { faChessKing } from "@fortawesome/free-solid-svg-icons";
-import { BarChart, GridOn, Info, OpenInNew } from "@mui/icons-material";
+import { BarChart, Code, GridOn, Info, OpenInNew } from "@mui/icons-material";
 import Commit from "../../components/Commit";
 
 const PathFindingBranch = () => {
@@ -18,7 +18,11 @@ const PathFindingBranch = () => {
         title="View Live!"
         link="https://jcrews253.github.io/path-finding-visualizer/"
       />
-
+      <Commit
+        Icon={Code}
+        title="Source Code"
+        link="https://github.com/JCrews253/path-finding-visualizer"
+      />
       <Commit
         title="Next Project: Chess AI - Min Max Algo"
         faIcon={faChessKing}
