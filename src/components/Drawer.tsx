@@ -1,21 +1,18 @@
-import { styled, Theme, CSSObject } from "@mui/material/styles";
 import {
   Box,
   Collapse,
   Drawer as MuiDrawer,
   ListItemButton,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+  IconButton,
+  styled,
+  Theme,
+  CSSObject,
 } from "@mui/material";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InfoIcon from "@mui/icons-material/Info";
-import WorkIcon from "@mui/icons-material/Work";
-import SchoolIcon from "@mui/icons-material/School";
-import ContactPageIcon from "@mui/icons-material/ContactPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCodeBranch,
@@ -29,6 +26,12 @@ import {
   Fastfood,
   GridOn,
   HomeWork,
+  Home,
+  Info,
+  Work,
+  School,
+  ContactPage,
+  ChevronLeft,
 } from "@mui/icons-material";
 import { useContext, useState } from "react";
 import SelLogo from "../Icons/SelLogo";
@@ -91,7 +94,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
   const [openBranches, setOpenBranches] = useState(false);
   const [openWork, setOpenWork] = useState(true);
   const [openProjects, setOpenProjects] = useState(true);
-  const { setBranch } = useContext(BranchContext);
+  const { branch, setBranch } = useContext(BranchContext);
   const handleClick = (elementId: string) => {
     document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -107,11 +110,28 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
     >
       <DrawerHeader>
         <IconButton onClick={() => setOpen(false)} disableRipple>
-          <ChevronLeftIcon />
+          <ChevronLeft />
         </IconButton>
       </DrawerHeader>
       <Divider />
       <List>
+        <ListItem
+          button
+          key="Home"
+          disableRipple
+          onClick={() => {
+            if (branch === "main") {
+              handleClick("head");
+            } else {
+              setBranch("main");
+            }
+          }}
+        >
+          <ListItemIcon>
+            <Home />
+          </ListItemIcon>
+          <ListItemText primary="Home" sx={{ ml: -1 }} />
+        </ListItem>
         <ListItem
           button
           key="About"
@@ -119,7 +139,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
           onClick={() => handleClick("about")}
         >
           <ListItemIcon>
-            <InfoIcon />
+            <Info />
           </ListItemIcon>
           <ListItemText primary="About" sx={{ ml: -1 }} />
         </ListItem>
@@ -130,7 +150,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
           onClick={() => handleClick("work")}
         >
           <ListItemIcon>
-            <WorkIcon />
+            <Work />
           </ListItemIcon>
           <ListItemText primary="Work Expierence" sx={{ ml: -1 }} />
         </ListItem>
@@ -152,7 +172,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
           onClick={() => handleClick("education")}
         >
           <ListItemIcon>
-            <SchoolIcon />
+            <School />
           </ListItemIcon>
           <ListItemText primary="Education" sx={{ ml: -1 }} />
         </ListItem>
@@ -163,7 +183,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
           onClick={() => handleClick("contact")}
         >
           <ListItemIcon>
-            <ContactPageIcon />
+            <ContactPage />
           </ListItemIcon>
           <ListItemText primary="Contact" sx={{ ml: -1 }} />
         </ListItem>
@@ -198,7 +218,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
               disableRipple
             >
               <ListItemIcon>
-                <WorkIcon />
+                <Work />
               </ListItemIcon>
               <ListItemText primary="Work" sx={{ ml: -1 }} />
               {openWork ? <ExpandLess /> : <ExpandMore />}

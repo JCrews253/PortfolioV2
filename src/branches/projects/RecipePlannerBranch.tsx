@@ -1,6 +1,7 @@
 import { faChessKing } from "@fortawesome/free-solid-svg-icons";
 import { Code, Fastfood, Info, OpenInNew } from "@mui/icons-material";
 import Commit from "../../components/Commit";
+import PsiLogo from "../../Images/psi_adobespark.png";
 
 const RecipePlannerBranch = () => {
   return (
@@ -18,6 +19,14 @@ const RecipePlannerBranch = () => {
         Icon={Code}
         title="Source Code"
         link="https://github.com/JCrews253/FoodPlanner"
+      />
+      <Commit
+        title="Work Experience: Process Solutions Inc"
+        image={PsiLogo}
+        iconSize={80}
+        isInit
+        branch="psi"
+        routeBranch
       />
       <Commit
         title="Previous Project: Chess AI - Min Max Algo"

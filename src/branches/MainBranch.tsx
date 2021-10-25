@@ -55,6 +55,7 @@ const MainBranch = () => (
               display: "flex",
               justifyContent: "center",
               width: "100%",
+              height: "40px",
               fill: "#FFFFFF",
             }}
           >

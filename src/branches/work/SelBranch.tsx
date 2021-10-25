@@ -1,5 +1,6 @@
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
-import { Info } from "@mui/icons-material";
+import { CheckCircle, Info, OpenInNew } from "@mui/icons-material";
+import Branch from "../../components/Branch";
 import Commit from "../../components/Commit";
 import SelLogo from "../../Icons/SelLogo";
 import PsiLogo from "../../Images/psi_adobespark.png";
@@ -28,7 +29,29 @@ const SelBranch = () => {
         iconSize={100}
       />
       <Commit Icon={Info} title="About" />
-      <Commit title="Accomplishments" faIcon={faTrophy} iconSize={38} />
+      <Commit title="Accomplishments/Tasks" faIcon={faTrophy} iconSize={38} />
+      <Branch>
+        <Commit
+          title="Collaborated on a team of engineers to execute user interface enhancements"
+          Icon={CheckCircle}
+          isBranch
+        />
+        <Commit
+          title="Collaborated on a team of engineers to execute user interface enhancements"
+          Icon={CheckCircle}
+          isBranch
+        />
+        <Commit
+          title="Created reusable React components to a library shared across the company"
+          Icon={CheckCircle}
+          isBranch
+        />
+      </Branch>
+      <Commit
+        Icon={OpenInNew}
+        title="Schweitzer Engineering Labratories Website"
+        link="https://selinc.com/"
+      />
       <Commit
         title="Previous Work: Process Solutions Inc"
         image={PsiLogo}
