@@ -23,5 +23,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Deploying the static website to gh-pages
-        run: yarn build
+        run: yarn deploy
 
