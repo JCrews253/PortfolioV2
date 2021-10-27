@@ -152,7 +152,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
           <ListItemIcon>
             <Work />
           </ListItemIcon>
-          <ListItemText primary="Work Expierence" sx={{ ml: -1 }} />
+          <ListItemText primary="Work Experience" sx={{ ml: -1 }} />
         </ListItem>
         <ListItem
           button

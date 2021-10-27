@@ -62,7 +62,7 @@ const MainBranch = () => (
           </div>
         }
         title="Associate Software Engineer"
-        content="Schweitzer Engineering Labratories"
+        content="Schweitzer Engineering Laboratories"
         subContent="C#, React, GraphQL, Typescript"
         date="October 2020-Present"
         isBranch
@@ -159,7 +159,7 @@ const MainBranch = () => (
         title="LinkedIn"
         branch="linkedIn"
         isBranch
-        link="https://www.linkedin.com/in/james-crews-208742132"
+        link="https://linkedin.com/in/jamesrcrews"
       />
       <Commit Icon={InsertDriveFile} title="Resume" branch="resume" isBranch />
       <Commit

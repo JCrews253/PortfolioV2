@@ -20,17 +20,17 @@ const PsiBranch = () => {
       <Commit title="Accomplishments/Tasks" faIcon={faTrophy} iconSize={38} />
       <Branch>
         <Commit
-          content="Created a tool in C# that generates a 80% of PLC logic for our most common project types."
+          title="Created a tool in C# that generates a 80% of PLC logic for our most common project types."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          content="Redesigned all previous Wonderware HMI screens to be more object like instead of creating duplicates of the same screen."
+          title="Redesigned all previous Wonderware HMI screens to be more object like instead of creating duplicates of the same screen."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          content="Completed high profile projects which opened more opportunities for company growth."
+          title="Completed high profile projects which opened more opportunities for company growth."
           Icon={CheckCircle}
           isBranch
         />
@@ -41,7 +41,7 @@ const PsiBranch = () => {
         link="https://processsolutions.com/"
       />
       <Commit
-        title="Next Work: Schweitzer Engineering Labratories"
+        title="Next Work: Schweitzer Engineering Laboratories"
         Element={
           <div
             style={{

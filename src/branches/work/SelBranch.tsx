@@ -1,5 +1,5 @@
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
-import { CheckCircle, Info, OpenInNew } from "@mui/icons-material";
+import { CheckCircle, Code, Info, OpenInNew } from "@mui/icons-material";
 import Branch from "../../components/Branch";
 import Commit from "../../components/Commit";
 import SelLogo from "../../Icons/SelLogo";
@@ -23,34 +23,59 @@ const SelBranch = () => {
             <SelLogo />
           </div>
         }
-        title="Schweitzer Engineering Labratories"
+        title="Schweitzer Engineering Laboratories"
         subContent="Associate Software Engineer"
         branch="sel"
         iconSize={100}
       />
-      <Commit Icon={Info} title="About" />
+      <Commit
+        Icon={Info}
+        title="About"
+        content="At my current role at SEL, I am a part of the development team working on Grid Configurator. This is an ASP.NET app used to configure 
+        relays in power stations around the world."
+      />
+      <Commit
+        Icon={Code}
+        title="Tech stack"
+        subContent="C#, React, Typescript, GraphQL"
+      />
       <Commit title="Accomplishments/Tasks" faIcon={faTrophy} iconSize={38} />
       <Branch>
         <Commit
-          content="Collaborated on a team of engineers to execute user interface enhancements"
+          title="Collaborated on a team of engineers to execute user interface enhancements."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          content="Collaborated on a team of engineers to execute user interface enhancements"
+          title="Implemented new full stack features to make end users workflow's more efficient."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          content="Created reusable React components to a library shared across the company"
+          title="Created reusable React components that were added to a library shared across the company."
+          Icon={CheckCircle}
+          isBranch
+        />
+        <Commit
+          title="Developed new API endpoints as well as improved speed and reliability of existing ones."
+          Icon={CheckCircle}
+          isBranch
+        />
+        <Commit
+          title="Write comprehensive tests covering every new feature that is implemented."
           Icon={CheckCircle}
           isBranch
         />
       </Branch>
       <Commit
         Icon={OpenInNew}
-        title="Schweitzer Engineering Labratories Website"
+        title="Schweitzer Engineering Laboratories Website"
         link="https://selinc.com/"
+      />
+      <Commit
+        Icon={OpenInNew}
+        title="Grid Configurator page"
+        link="https://selinc.com/products/5037/"
       />
       <Commit
         title="Previous Work: Process Solutions Inc"
