@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "//JCrews253.github.io/PortfolioV2/static/css/main.f7206261.chunk.css",
-    "main.js": "//JCrews253.github.io/PortfolioV2/static/js/main.72abce80.chunk.js",
-    "main.js.map": "//JCrews253.github.io/PortfolioV2/static/js/main.72abce80.chunk.js.map",
-    "runtime-main.js": "//JCrews253.github.io/PortfolioV2/static/js/runtime-main.2bf1d6d6.js",
-    "runtime-main.js.map": "//JCrews253.github.io/PortfolioV2/static/js/runtime-main.2bf1d6d6.js.map",
-    "static/js/2.498e3701.chunk.js": "//JCrews253.github.io/PortfolioV2/static/js/2.498e3701.chunk.js",
-    "static/js/2.498e3701.chunk.js.map": "//JCrews253.github.io/PortfolioV2/static/js/2.498e3701.chunk.js.map",
-    "index.html": "//JCrews253.github.io/PortfolioV2/index.html",
-    "static/css/main.f7206261.chunk.css.map": "//JCrews253.github.io/PortfolioV2/static/css/main.f7206261.chunk.css.map",
-    "static/js/2.498e3701.chunk.js.LICENSE.txt": "//JCrews253.github.io/PortfolioV2/static/js/2.498e3701.chunk.js.LICENSE.txt",
-    "static/media/GrcLogo.5312b581.png": "//JCrews253.github.io/PortfolioV2/static/media/GrcLogo.5312b581.png",
-    "static/media/branchesLeftDark.e0828a2d.png": "//JCrews253.github.io/PortfolioV2/static/media/branchesLeftDark.e0828a2d.png",
-    "static/media/branchesLeftLight.08f5ff9c.png": "//JCrews253.github.io/PortfolioV2/static/media/branchesLeftLight.08f5ff9c.png",
-    "static/media/branchesRightDark.88057609.png": "//JCrews253.github.io/PortfolioV2/static/media/branchesRightDark.88057609.png",
-    "static/media/branchesRightLight.ab950069.png": "//JCrews253.github.io/PortfolioV2/static/media/branchesRightLight.ab950069.png",
-    "static/media/profile-picture.b2037f3b.jpg": "//JCrews253.github.io/PortfolioV2/static/media/profile-picture.b2037f3b.jpg",
-    "static/media/psi_adobespark.8f5404ab.png": "//JCrews253.github.io/PortfolioV2/static/media/psi_adobespark.8f5404ab.png",
-    "static/media/wsu.ec44b066.png": "//JCrews253.github.io/PortfolioV2/static/media/wsu.ec44b066.png"
+    "main.css": "/PortfolioV2/static/css/main.f7206261.chunk.css",
+    "main.js": "/PortfolioV2/static/js/main.07dc17c5.chunk.js",
+    "main.js.map": "/PortfolioV2/static/js/main.07dc17c5.chunk.js.map",
+    "runtime-main.js": "/PortfolioV2/static/js/runtime-main.3648430a.js",
+    "runtime-main.js.map": "/PortfolioV2/static/js/runtime-main.3648430a.js.map",
+    "static/js/2.a4856bba.chunk.js": "/PortfolioV2/static/js/2.a4856bba.chunk.js",
+    "static/js/2.a4856bba.chunk.js.map": "/PortfolioV2/static/js/2.a4856bba.chunk.js.map",
+    "index.html": "/PortfolioV2/index.html",
+    "static/css/main.f7206261.chunk.css.map": "/PortfolioV2/static/css/main.f7206261.chunk.css.map",
+    "static/js/2.a4856bba.chunk.js.LICENSE.txt": "/PortfolioV2/static/js/2.a4856bba.chunk.js.LICENSE.txt",
+    "static/media/GrcLogo.5312b581.png": "/PortfolioV2/static/media/GrcLogo.5312b581.png",
+    "static/media/branchesLeftDark.e0828a2d.png": "/PortfolioV2/static/media/branchesLeftDark.e0828a2d.png",
+    "static/media/branchesLeftLight.08f5ff9c.png": "/PortfolioV2/static/media/branchesLeftLight.08f5ff9c.png",
+    "static/media/branchesRightDark.88057609.png": "/PortfolioV2/static/media/branchesRightDark.88057609.png",
+    "static/media/branchesRightLight.ab950069.png": "/PortfolioV2/static/media/branchesRightLight.ab950069.png",
+    "static/media/profile-picture.b2037f3b.jpg": "/PortfolioV2/static/media/profile-picture.b2037f3b.jpg",
+    "static/media/psi_adobespark.8f5404ab.png": "/PortfolioV2/static/media/psi_adobespark.8f5404ab.png",
+    "static/media/wsu.ec44b066.png": "/PortfolioV2/static/media/wsu.ec44b066.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2bf1d6d6.js",
-    "static/js/2.498e3701.chunk.js",
+    "static/js/runtime-main.3648430a.js",
+    "static/js/2.a4856bba.chunk.js",
     "static/css/main.f7206261.chunk.css",
-    "static/js/main.72abce80.chunk.js"
+    "static/js/main.07dc17c5.chunk.js"
   ]
 }
