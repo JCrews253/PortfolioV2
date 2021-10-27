@@ -96,7 +96,18 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
   const [openProjects, setOpenProjects] = useState(true);
   const { branch, setBranch } = useContext(BranchContext);
   const handleClick = (elementId: string) => {
-    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" });
+    if (branch !== "main") {
+      setBranch("main");
+      setTimeout(() => {
+        document
+          .getElementById(elementId)
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 1);
+    } else {
+      document
+        .getElementById(elementId)
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
   };
   return (
     <StyledDrawer
