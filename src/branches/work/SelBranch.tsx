@@ -32,17 +32,17 @@ const SelBranch = () => {
       <Commit title="Accomplishments/Tasks" faIcon={faTrophy} iconSize={38} />
       <Branch>
         <Commit
-          title="Collaborated on a team of engineers to execute user interface enhancements"
+          content="Collaborated on a team of engineers to execute user interface enhancements"
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          title="Collaborated on a team of engineers to execute user interface enhancements"
+          content="Collaborated on a team of engineers to execute user interface enhancements"
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          title="Created reusable React components to a library shared across the company"
+          content="Created reusable React components to a library shared across the company"
           Icon={CheckCircle}
           isBranch
         />

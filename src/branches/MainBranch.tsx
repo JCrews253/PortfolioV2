@@ -29,21 +29,20 @@ const MainBranch = () => (
       id="head"
       size="lg"
       image={ProfilePicture}
-      title="Hello! My name is James Crews. auto deploy test"
+      title="Hello! My name is James Crews."
     />
     <Commit Icon={Info} title="About" id="about" />
     <Branch>
       <Commit
         Icon={Person}
         isBranch
-        title="Background"
-        content="Hello! My name is James Crews and I am an aspiring self-taught software engineer. Over the past couple years i have been teaching myself how to code, with most of my experience being in C# and Typescript/Javascript, specifically in the React framework. I have a heavy interest in algorithmic programming and a love solving complex problems. A few of my projects showing my progress can be found on this website."
+        content="I am a self-taught software engineer with a background in both front-end and back-end development. I love programming new ideas and solving complex problems."
       />
       <Commit
         Icon={Code}
         isBranch
         title="Skills"
-        content="C#, React, Typescript, GraphQL, Material UI, CI/CD, git, .NET core, NUnit, SpecFlow"
+        content="C#, React, Typescript, GraphQL, Material UI, CI/CD, git, .NET core, NUnit, SpecFlow, HTML, CSS"
       />
     </Branch>
     <Commit Icon={Work} title="Work Experience" id="work" />

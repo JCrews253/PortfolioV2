@@ -20,17 +20,17 @@ const PsiBranch = () => {
       <Commit title="Accomplishments/Tasks" faIcon={faTrophy} iconSize={38} />
       <Branch>
         <Commit
-          title="Created a tool in C# that generates a 80% of PLC logic for our most common project types."
+          content="Created a tool in C# that generates a 80% of PLC logic for our most common project types."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          title="Redesigned all previous Wonderware HMI screens to be more object like instead of creating duplicates of the same screen."
+          content="Redesigned all previous Wonderware HMI screens to be more object like instead of creating duplicates of the same screen."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          title="Completed high profile projects which opened more opportunities for company growth."
+          content="Completed high profile projects which opened more opportunities for company growth."
           Icon={CheckCircle}
           isBranch
         />
