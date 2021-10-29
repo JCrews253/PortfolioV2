@@ -2,7 +2,7 @@ import { ThemeProvider, Box, PaletteMode, createTheme } from "@mui/material";
 import AppBar from "./components/AppBar";
 import { getThemePalette } from "./Theme";
 import Drawer from "./components/Drawer";
-import { createContext, useMemo, useState } from "react";
+import { createContext, useEffect, useMemo, useState } from "react";
 import BranchesLeftDark from "./Images/branchesLeftDark.png";
 import BranchesLeftLight from "./Images/branchesLeftLight.png";
 import BranchesRightDark from "./Images/branchesRightDark.png";
@@ -66,6 +66,10 @@ function App() {
         return <MainBranch />;
     }
   };
+
+  useEffect(() => {
+    document.getElementById("head")?.scrollIntoView({ behavior: "smooth" });
+  }, [branch]);
 
   return (
     <BranchContext.Provider value={branchValue}>

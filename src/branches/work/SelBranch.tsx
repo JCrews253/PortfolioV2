@@ -10,6 +10,7 @@ const SelBranch = () => {
     <>
       <Commit
         size="lg"
+        id="head"
         Element={
           <div
             style={{
@@ -42,34 +43,34 @@ const SelBranch = () => {
       <Commit title="Accomplishments/Tasks" faIcon={faTrophy} iconSize={38} />
       <Branch>
         <Commit
-          title="Collaborated on a team of engineers to execute user interface enhancements."
+          content="Collaborated on a team of engineers to execute user interface enhancements."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          title="Implemented new full stack features to make end users workflow's more efficient."
+          content="Implemented new full stack features to make end users workflow's more efficient."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          title="Created reusable React components that were added to a library shared across the company."
+          content="Contributed reusable React components to a library shared across the company."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          title="Developed new API endpoints as well as improved speed and reliability of existing ones."
+          content="Developed new API endpoints as well as improved speed and reliability of existing ones."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          title="Write comprehensive tests covering every new feature that is implemented."
+          content="Write comprehensive tests covering every new feature that is implemented."
           Icon={CheckCircle}
           isBranch
         />
       </Branch>
       <Commit
         Icon={OpenInNew}
-        title="Schweitzer Engineering Laboratories Website"
+        title="Schweitzer Engineering Laboratories website"
         link="https://selinc.com/"
       />
       <Commit

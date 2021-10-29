@@ -6,12 +6,13 @@ const SortingVisualizationBranch = () => {
     <>
       <Commit
         size="lg"
+        id="head"
         Icon={BarChart}
         title="Sorting Visualization"
         branch="sorting"
         iconSize={100}
       />
-      <Commit Icon={Info} title="About" />
+      <Commit Icon={Info} title="About" content="description" />
       <Commit
         Icon={OpenInNew}
         title="View Live!"

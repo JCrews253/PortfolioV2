@@ -7,6 +7,7 @@ const PathFindingBranch = () => {
     <>
       <Commit
         size="lg"
+        id="head"
         Icon={GridOn}
         title="Retro Path Finding Visualization"
         branch="pathFinding"

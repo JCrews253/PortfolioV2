@@ -7,6 +7,7 @@ const ChessBranch = () => {
     <>
       <Commit
         size="lg"
+        id="head"
         faIcon={faChessKing}
         title="Chess AI - Min Max Algo"
         branch="chess"

@@ -8,6 +8,7 @@ const RecipePlannerBranch = () => {
     <>
       <Commit
         size="lg"
+        id="head"
         Icon={Fastfood}
         title="Recipe Planner"
         branch="recipe"
