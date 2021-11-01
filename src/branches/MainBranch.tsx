@@ -22,6 +22,7 @@ import WsuLogo from "../Images/wsu.png";
 import GrcLogo from "../Images/GrcLogo.png";
 import SelLogo from "../Icons/SelLogo";
 import PsiLogo from "../Images/psi_adobespark.png";
+import Resume from "../Images/JamesResume.pdf";
 
 const MainBranch = () => (
   <>
@@ -161,7 +162,13 @@ const MainBranch = () => (
         isBranch
         link="https://linkedin.com/in/jamesrcrews"
       />
-      <Commit Icon={InsertDriveFile} title="Resume" branch="resume" isBranch />
+      <Commit
+        Icon={InsertDriveFile}
+        title="Resume"
+        branch="resume"
+        isBranch
+        link={Resume}
+      />
       <Commit
         Icon={Email}
         title="Email"

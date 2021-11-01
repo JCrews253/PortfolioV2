@@ -13,10 +13,8 @@ const ChessBranch = () => {
         branch="chess"
         iconSize={100}
       />
-      <Commit
-        Icon={Info}
-        title="Chess AI that uses the Min-Max game algorithm to determine its moves."
-      />
+      <Commit Icon={Info} title="About" content="" />
+      <Commit Icon={Code} title="Tech stack" subContent="React, Typescript" />
       <Commit
         Icon={OpenInNew}
         title="View Live!"
