@@ -14,7 +14,7 @@ const RecipePlannerBranch = () => {
         branch="recipe"
         iconSize={100}
       />
-      <Commit Icon={Info} title="About" />
+      <Commit Icon={Info} title="About" content="WIP" />
       <Commit Icon={OpenInNew} title="View Live!" />
       <Commit
         Icon={Code}

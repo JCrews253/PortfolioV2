@@ -23,8 +23,8 @@ const ChessBranch = () => {
       score when it is the opposing players turn. This alternation continues until it has reached the head of the decision tree, where then the 
       AI will make its actual move. Some of the highlights of this project are possible move highlighting when it is the players turn, and a list of
       all moves that have been performed during the game."
+        subContent="Tech Stack: React, Typescript"
       />
-      <Commit Icon={Code} title="Tech stack" subContent="React, Typescript" />
       <Commit
         Icon={OpenInNew}
         title="View Live!"

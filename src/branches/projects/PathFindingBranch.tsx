@@ -21,11 +21,7 @@ const PathFindingBranch = () => {
       back. The operation is slightly different since the animation queue is now being requested from an express server hosted on Heroku. A Redux store is
       used to handle actions and algorithm selection. Some of the cool features of this app are the ability to create your own custom maze, and also being
       able to drag the start or end points once the maze has been solved to see an instant update of the calculated path."
-      />
-      <Commit
-        Icon={Code}
-        title="Tech stack"
-        subContent="React, Redux, Typescript, Express"
+        subContent="Tech Stack: React, Redux, Typescript, Express"
       />
       <Commit
         Icon={OpenInNew}

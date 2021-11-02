@@ -18,8 +18,8 @@ const SortingVisualizationBranch = () => {
         content="React app that animates a variety of popular sorting algorithms to give a visual representation of how they work. 
       The animation logic works by tracking of all the index comparisons in order and pushing them into a queue. Once the array is sorted, the queue is then looped through 
       using a timeout to set the styles of the current index being compared."
+        subContent="Tech Stack: React, Typescript"
       />
-      <Commit Icon={Code} title="Tech stack" subContent="React, Typescript" />
       <Commit
         Icon={OpenInNew}
         title="View Live!"
