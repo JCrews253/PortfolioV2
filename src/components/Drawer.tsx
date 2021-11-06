@@ -32,6 +32,7 @@ import {
   School,
   ContactPage,
   ChevronLeft,
+  Album,
 } from "@mui/icons-material";
 import { useContext, useState } from "react";
 import SelLogo from "../Icons/SelLogo";
@@ -294,6 +295,16 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
                     <Fastfood />
                   </ListItemIcon>
                   <ListItemText primary="Recipe App" sx={{ ml: -1 }} />
+                </ListItemButton>
+                <ListItemButton
+                  sx={{ pl: 7 }}
+                  disableRipple
+                  onClick={() => setBranch("vinyl")}
+                >
+                  <ListItemIcon sx={{ pl: "2px" }}>
+                    <Album />
+                  </ListItemIcon>
+                  <ListItemText primary="Vinyl Bot" sx={{ ml: -1 }} />
                 </ListItemButton>
                 <ListItemButton
                   sx={{ pl: 7 }}
