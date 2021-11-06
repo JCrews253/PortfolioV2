@@ -3,6 +3,7 @@ export type branch =
   | "sel"
   | "psi"
   | "recipe"
+  | "vinyl"
   | "chess"
   | "pathFinding"
   | "sorting"

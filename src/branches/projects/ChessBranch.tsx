@@ -1,6 +1,7 @@
 import { faChessKing } from "@fortawesome/free-solid-svg-icons";
 import { Code, Fastfood, GridOn, Info, OpenInNew } from "@mui/icons-material";
 import Commit from "../../components/Commit";
+import Vinyl from "../../Images/vinyl.png";
 
 const ChessBranch = () => {
   return (
@@ -36,9 +37,10 @@ const ChessBranch = () => {
         link="https://github.com/JCrews253/chess"
       />
       <Commit
-        title="Next Project: Recipe Planner"
-        Icon={Fastfood}
-        branch="recipe"
+        title="Next Project: Vinyl Discord Bot"
+        image={Vinyl}
+        iconSize={80}
+        branch="vinyl"
         routeBranch
       />
       <Commit

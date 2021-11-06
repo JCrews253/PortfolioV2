@@ -23,6 +23,7 @@ import GrcLogo from "../Images/GrcLogo.png";
 import SelLogo from "../Icons/SelLogo";
 import PsiLogo from "../Images/psi_adobespark.png";
 import Resume from "../Images/JamesResume.pdf";
+import Vinyl from "../Images/vinyl.png";
 
 const MainBranch = () => (
   <>
@@ -96,6 +97,16 @@ const MainBranch = () => (
         subContent="C#, React, GraphQL, Typescript, MongoDB"
         isBranch
         branch="recipe"
+        routeBranch
+      />
+      <Commit
+        image={Vinyl}
+        iconSize={80}
+        title="Vinyl Discord Bot"
+        content="Discord bot that plays music on request"
+        subContent="C#"
+        isBranch
+        branch="vinyl"
         routeBranch
       />
       <Commit

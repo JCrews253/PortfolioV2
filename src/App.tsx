@@ -16,6 +16,7 @@ import SelBranch from "./branches/work/SelBranch";
 import PsiBranch from "./branches/work/PsiBranch";
 import RecipePlannerBranch from "./branches/projects/RecipePlannerBranch";
 import { branch } from "./branches/Branch";
+import VinylBranch from "./branches/projects/VinylBranch";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 export const BranchContext = createContext({
@@ -56,6 +57,8 @@ function App() {
         return <PsiBranch />;
       case "recipe":
         return <RecipePlannerBranch />;
+      case "vinyl":
+        return <VinylBranch />;
       case "chess":
         return <ChessBranch />;
       case "pathFinding":

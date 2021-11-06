@@ -1,7 +1,7 @@
-import { faChessKing } from "@fortawesome/free-solid-svg-icons";
 import { Code, Fastfood, Info, OpenInNew } from "@mui/icons-material";
 import Commit from "../../components/Commit";
 import PsiLogo from "../../Images/psi_adobespark.png";
+import Vinyl from "../../Images/vinyl.png";
 
 const RecipePlannerBranch = () => {
   return (
@@ -30,10 +30,11 @@ const RecipePlannerBranch = () => {
         routeBranch
       />
       <Commit
-        title="Previous Project: Chess AI - Min Max Algo"
-        faIcon={faChessKing}
+        title="Previous Project: Vinyl Discord Bot"
+        image={Vinyl}
+        iconSize={80}
         isInit
-        branch="chess"
+        branch="vinyl"
         routeBranch
       />
     </>

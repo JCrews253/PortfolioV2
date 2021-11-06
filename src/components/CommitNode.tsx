@@ -133,6 +133,7 @@ const CommitNode = ({
             style={{
               width: `${iconSize ? iconSize : 100}%`,
               objectFit: "scale-down",
+              borderRadius: "50%",
             }}
             alt=""
           />
