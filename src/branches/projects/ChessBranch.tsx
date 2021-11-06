@@ -1,5 +1,5 @@
 import { faChessKing } from "@fortawesome/free-solid-svg-icons";
-import { Code, Fastfood, GridOn, Info, OpenInNew } from "@mui/icons-material";
+import { Code, GridOn, Info, OpenInNew } from "@mui/icons-material";
 import Commit from "../../components/Commit";
 import Vinyl from "../../Images/vinyl.png";
 
