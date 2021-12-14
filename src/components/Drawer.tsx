@@ -248,7 +248,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
                         width: "35px",
                         height: "20px",
                         ml: "-4px",
-                        fill: (theme) => theme.palette.text.primary,
+                        fill: (theme: Theme) => theme.palette.text.primary,
                         opacity: 0.7,
                       }}
                     >
