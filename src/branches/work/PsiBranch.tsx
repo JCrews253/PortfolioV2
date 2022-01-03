@@ -62,10 +62,10 @@ const PsiBranch = () => {
         routeBranch
       />
       <Commit
-        title="Latest Project: Recipe Planner"
+        title="Latest Project: Zest"
         Icon={Fastfood}
         isInit
-        branch="recipe"
+        branch="zest"
         routeBranch
       />
     </>

@@ -3,19 +3,23 @@ import Commit from "../../components/Commit";
 import PsiLogo from "../../Images/psi_adobespark.png";
 import Vinyl from "../../Images/vinyl.png";
 
-const RecipePlannerBranch = () => {
+const ZestBranch = () => {
   return (
     <>
       <Commit
         size="lg"
         id="head"
         Icon={Fastfood}
-        title="Recipe Planner"
-        branch="recipe"
+        title="Zest"
+        branch="zest"
         iconSize={100}
       />
       <Commit Icon={Info} title="About" content="WIP" />
-      <Commit Icon={OpenInNew} title="View Live!" />
+      <Commit
+        Icon={OpenInNew}
+        title="View Live!"
+        link="https://foodplanner20211113152303.azurewebsites.net/"
+      />
       <Commit
         Icon={Code}
         title="Source Code"
@@ -41,4 +45,4 @@ const RecipePlannerBranch = () => {
   );
 };
 
-export default RecipePlannerBranch;
+export default ZestBranch;

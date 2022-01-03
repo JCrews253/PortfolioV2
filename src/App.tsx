@@ -14,7 +14,7 @@ import PathFindingBranch from "./branches/projects/PathFindingBranch";
 import ChessBranch from "./branches/projects/ChessBranch";
 import SelBranch from "./branches/work/SelBranch";
 import PsiBranch from "./branches/work/PsiBranch";
-import RecipePlannerBranch from "./branches/projects/RecipePlannerBranch";
+import ZestBranch from "./branches/projects/ZestBranch";
 import { branch } from "./branches/Branch";
 import VinylBranch from "./branches/projects/VinylBranch";
 
@@ -55,8 +55,8 @@ function App() {
         return <SelBranch />;
       case "psi":
         return <PsiBranch />;
-      case "recipe":
-        return <RecipePlannerBranch />;
+      case "zest":
+        return <ZestBranch />;
       case "vinyl":
         return <VinylBranch />;
       case "chess":

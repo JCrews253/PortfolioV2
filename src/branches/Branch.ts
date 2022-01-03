@@ -2,7 +2,7 @@ export type branch =
   | "main"
   | "sel"
   | "psi"
-  | "recipe"
+  | "zest"
   | "vinyl"
   | "chess"
   | "pathFinding"

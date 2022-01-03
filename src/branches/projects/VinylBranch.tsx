@@ -31,9 +31,9 @@ const VinylBranch = () => {
         link="https://github.com/JCrews253/Vinyl-Discord-Bot"
       />
       <Commit
-        title="Next Project: Recipe Planner"
+        title="Next Project: Zest"
         Icon={Fastfood}
-        branch="recipe"
+        branch="zest"
         routeBranch
       />
       <Commit

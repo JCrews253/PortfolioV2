@@ -289,12 +289,12 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
                 <ListItemButton
                   sx={{ pl: 7 }}
                   disableRipple
-                  onClick={() => setBranch("recipe")}
+                  onClick={() => setBranch("zest")}
                 >
                   <ListItemIcon>
                     <Fastfood />
                   </ListItemIcon>
-                  <ListItemText primary="Recipe App" sx={{ ml: -1 }} />
+                  <ListItemText primary="Zest" sx={{ ml: -1 }} />
                 </ListItemButton>
                 <ListItemButton
                   sx={{ pl: 7 }}

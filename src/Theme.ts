@@ -37,8 +37,8 @@ export const ColorSelector = (branch: branch) => {
       return "#162D71";
     case "psi":
       return "#64B4C9";
-    case "recipe":
-      return "#162D71";
+    case "zest":
+      return "#5CC4B7";
     case "vinyl":
       return "#A27DE9";
     case "chess":
@@ -70,8 +70,8 @@ export const ColorSelectorDark = (branch: branch) => {
       return "#070E24";
     case "psi":
       return "#3D6F7C";
-    case "recipe":
-      return "#070E24";
+    case "zest":
+      return "#2E6256";
     case "vinyl":
       return "#6C539C";
     case "chess":

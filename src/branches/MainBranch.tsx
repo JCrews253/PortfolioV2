@@ -92,11 +92,11 @@ const MainBranch = () => (
     <Branch>
       <Commit
         Icon={Fastfood}
-        title="Recipe Planner"
+        title="Zest"
         content="App to find and plan recipes"
         subContent="C#, React, GraphQL, Typescript, MongoDB"
         isBranch
-        branch="recipe"
+        branch="zest"
         routeBranch
       />
       <Commit
