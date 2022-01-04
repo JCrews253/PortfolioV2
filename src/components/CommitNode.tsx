@@ -17,6 +17,7 @@ export interface CommitNodeProps {
   Icon?: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
     muiName: string;
   };
+  IconColor?: string;
   size?: "sm" | "lg";
   faIcon?: IconProp;
   Element?: ReactNode;
@@ -32,6 +33,7 @@ const CommitNode = ({
   isInit,
   image,
   Icon,
+  IconColor,
   size = "sm",
   faIcon,
   iconSize,
@@ -118,13 +120,18 @@ const CommitNode = ({
         }}
       >
         {Icon && (
-          <Icon sx={{ fontSize: iconSize ? iconSize : 50, fill: "white" }} />
+          <Icon
+            sx={{
+              fontSize: iconSize ? iconSize : 50,
+              fill: IconColor ?? "white",
+            }}
+          />
         )}
         {faIcon && (
           <FontAwesomeIcon
             icon={faIcon}
             style={{ fontSize: iconSize ? iconSize : 50 }}
-            color="#FFFFFF"
+            color={IconColor ?? "#FFFFFF"}
           />
         )}
         {image && (

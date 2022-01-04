@@ -14,7 +14,17 @@ const ZestBranch = () => {
         branch="zest"
         iconSize={100}
       />
-      <Commit Icon={Info} title="About" content="WIP" />
+      <Commit
+        Icon={Info}
+        title="About"
+        content="Zest is the current project I am working on for saving and easily viewing your favorite recipes.
+      Currently, Zest supports adding recipes (with photos), browsing all recipes, and saving recipes to your account. Features currently being 
+      implemented are a calendar for planning out meals for the week, shopping list for selected meals, and browsing for recipes based on categories.
+      Zest is a full stack app that uses React as a front end, ASP.NET (C#) as a backend, and Graphql as its API layer. Authentication is handled 
+      through Auth0, which allows signing in/up with Google. Recipe data is hosted on MongDB Atlas, photos on Azure storage containers and the app 
+      itself on Azure App Services."
+        subContent="Tech Stack: React, C#, GraphQL"
+      />
       <Commit
         Icon={OpenInNew}
         title="View Live!"

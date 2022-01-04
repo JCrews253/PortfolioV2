@@ -38,32 +38,32 @@ const SelBranch = () => {
       <Commit
         Icon={Code}
         title="Tech stack"
-        subContent="C#, React, Typescript, GraphQL"
+        subContent="C#, React, Typescript, GraphQL, NUnit, SpecFlow"
       />
       <Commit title="Accomplishments/Tasks" faIcon={faTrophy} iconSize={38} />
       <Branch>
         <Commit
-          content="Collaborated on a team of engineers to execute user interface enhancements."
+          content="Collaborated with UI/UX team from design to implementation of dozens of new UIs that improve user's workflows."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          content="Implemented new full stack features to make end users workflow's more efficient."
+          content="Implemented new edit session feature that persists user's changes, allowing them to navigate between projects without having to save."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          content="Contributed reusable React components to a library shared across the company."
+          content="Created 10+ new API endpoints as well as improved the speed of existing ones."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          content="Developed new API endpoints as well as improved speed and reliability of existing ones."
+          content="Contributed reusable React components to an internal library shared across the company."
           Icon={CheckCircle}
           isBranch
         />
         <Commit
-          content="Write comprehensive tests covering every new feature that is implemented."
+          content="Wrote extensive test coverage for each new feature being implemented."
           Icon={CheckCircle}
           isBranch
         />

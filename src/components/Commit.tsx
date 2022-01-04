@@ -10,6 +10,7 @@ const Commit = ({
   isBranch,
   isInit,
   Icon,
+  IconColor,
   image,
   size = "sm",
   title,
@@ -36,6 +37,7 @@ const Commit = ({
         isBranch={isBranch}
         isInit={isInit}
         Icon={Icon}
+        IconColor={IconColor}
         faIcon={faIcon}
         image={image}
         size={size}

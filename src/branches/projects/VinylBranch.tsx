@@ -17,7 +17,10 @@ const VinylBranch = () => {
       <Commit
         Icon={Info}
         title="About"
-        content=""
+        content="Discord bot that takes song requests and plays them in the requesting user's voice channel. To play a song, use the '.play' command, followed 
+        by a song name or youtube link, i.e. '.play Come Sail Away'. Requesting a song while one is currently play will place it in a queue that will play
+        in the requested order. Music is loaded through Lavalink and streamed as a voice through Discord's bot API. Use the link below to add Vinyl to your
+        discord server and try it out your self!"
         subContent="Tech Stack: C#"
       />
       <Commit
