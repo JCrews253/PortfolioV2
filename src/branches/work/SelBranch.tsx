@@ -46,26 +46,36 @@ const SelBranch = () => {
           content="Collaborated with UI/UX team from design to implementation of dozens of new UIs that improve user's workflows."
           Icon={CheckCircle}
           isBranch
+          size="sm"
+          iconSize={34}
         />
         <Commit
           content="Implemented new edit session feature that persists user's changes, allowing them to navigate between projects without having to save."
           Icon={CheckCircle}
           isBranch
+          size="sm"
+          iconSize={34}
         />
         <Commit
           content="Created 10+ new API endpoints as well as improved the speed of existing ones."
           Icon={CheckCircle}
           isBranch
+          size="sm"
+          iconSize={34}
         />
         <Commit
           content="Contributed reusable React components to an internal library shared across the company."
           Icon={CheckCircle}
           isBranch
+          size="sm"
+          iconSize={34}
         />
         <Commit
           content="Wrote extensive test coverage for each new feature being implemented."
           Icon={CheckCircle}
           isBranch
+          size="sm"
+          iconSize={34}
         />
       </Branch>
       <Commit
