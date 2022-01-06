@@ -38,7 +38,8 @@ const MainBranch = () => (
       <Commit
         Icon={Person}
         isBranch
-        content="I am a self-taught software engineer with a background in both front-end and back-end development. I love programming new ideas and solving complex problems."
+        content="I am a self-taught software engineer with a background in both front-end and back-end development. I love programming new ideas 
+        and solving complex problems."
       />
       <Commit
         Icon={Code}
