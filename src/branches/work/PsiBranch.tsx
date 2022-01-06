@@ -24,16 +24,22 @@ const PsiBranch = () => {
           content="Created a tool in C# that generates 80% of PLC logic for our most common project types."
           Icon={CheckCircle}
           isBranch
+          size="sm"
+          iconSize={34}
         />
         <Commit
           content="Redesigned all Wonderware HMI UI's to be object based resulting in significant reduction in development time."
           Icon={CheckCircle}
           isBranch
+          size="sm"
+          iconSize={34}
         />
         <Commit
           content="Completed high profile projects which opened more opportunities for company growth."
           Icon={CheckCircle}
           isBranch
+          size="sm"
+          iconSize={34}
         />
       </Branch>
       <Commit

@@ -18,7 +18,7 @@ export interface CommitNodeProps {
     muiName: string;
   };
   IconColor?: string;
-  size?: "sm" | "lg";
+  size?: "sm" | "md" | "lg";
   faIcon?: IconProp;
   Element?: ReactNode;
   iconSize?: number;
@@ -34,7 +34,7 @@ const CommitNode = ({
   image,
   Icon,
   IconColor,
-  size = "sm",
+  size = "md",
   faIcon,
   iconSize,
   Element,
@@ -64,18 +64,54 @@ const CommitNode = ({
     }
   };
 
+  const GetContainerSize = () => {
+    switch (size) {
+      case "sm":
+        return "100px";
+      case "lg":
+        return "250px";
+      case "md":
+      default:
+        return "150px";
+    }
+  };
+
+  const GetNodeSize = () => {
+    switch (size) {
+      case "sm":
+        return "60px";
+      case "lg":
+        return "150px";
+      case "md":
+      default:
+        return "90px";
+    }
+  };
+
+  const GetPadding = () => {
+    switch (size) {
+      case "lg":
+        return undefined;
+      case "sm":
+      case "md":
+      default:
+        return "0px 30px";
+    }
+  };
+
   return (
     <Box
       id={id}
       sx={{
-        minHeight: size === "sm" ? "150px" : "250px",
+        minHeight: GetContainerSize(),
         height: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
         userSelect: "none",
-        padding: size === "sm" ? "0px 30px" : undefined,
+        padding: GetPadding(),
+        marginLeft: size === "sm" ? "15px" : undefined,
       }}
     >
       <Box
@@ -86,7 +122,7 @@ const CommitNode = ({
                 ? theme.palette.secondary.main
                 : theme.palette.primary.dark
             }`,
-          height: size === "sm" ? "100%" : "50%",
+          height: size !== "lg" ? "100%" : "50%",
           position: "absolute",
           left: "50%",
           bottom: isInit ? 50 : 0,
@@ -95,8 +131,8 @@ const CommitNode = ({
       />
       <Box
         sx={{
-          width: size === "sm" ? "90px" : "150px",
-          height: size === "sm" ? "90px" : "150px",
+          width: GetNodeSize(),
+          height: GetNodeSize(),
           backgroundColor: (theme) => GetBackgroundColor(theme),
           borderRadius: "100%",
           border: (theme) => `solid 10px ${GetBorderColor(theme)}`,

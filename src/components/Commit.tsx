@@ -12,7 +12,7 @@ const Commit = ({
   Icon,
   IconColor,
   image,
-  size = "sm",
+  size = "md",
   title,
   content,
   subContent,

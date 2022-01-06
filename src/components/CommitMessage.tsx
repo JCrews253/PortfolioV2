@@ -6,7 +6,7 @@ export interface CommitMessageProps {
   content?: string;
   subContent?: string;
   date?: string;
-  size?: "sm" | "lg";
+  size?: "sm" | "md" | "lg";
 }
 
 const CommitMessage = ({
@@ -14,12 +14,13 @@ const CommitMessage = ({
   content,
   subContent,
   date,
-  size = "sm",
+  size = "md",
 }: CommitMessageProps) => {
   return (
     <Box
       sx={{
         paddingLeft: size === "lg" ? "20px" : undefined,
+        paddingRight: "32px",
         display: "flex",
         justifyContent: "space-between",
         flexGrow: 1,
@@ -31,7 +32,7 @@ const CommitMessage = ({
             variant="h1"
             sx={{
               fontWeight: 550,
-              fontSize: size === "sm" ? "16pt" : "22pt",
+              fontSize: size !== "lg" ? "16pt" : "22pt",
               color: (theme) => theme.palette.text.primary,
             }}
           >
